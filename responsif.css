@@ -1,0 +1,70 @@
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: .9rem;
+        line-height: 1.8rem;
+    }
+    .grid-3 {
+        gap: 1rem;
+    }
+    .study-right ul li {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    /* burger */
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 7px);
+    }
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+    /* navigation*/
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        /* Mengambil setengah lebar layar */
+        height: 100vh;
+        background: rgb(247, 247, 247);
+        border-left: 1px solid #b5cfff;
+        /* Ganti white ke #ddd agar garis terlihat di background terang */
+        z-index: 9;
+        /* Perbaikan Flexbox */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Memusatkan konten secara horizontal */
+        justify-content: center;
+        /* Memusatkan konten secara vertikal */
+        /* Transisi agar gerakan halus */
+        transition: transform 0.3s ease-in-out;
+        /* Kondisi awal: Tersembunyi di kanan */
+        transform: translateX(100%);
+    }
+    /* Tambahkan class ini melalui JavaScript untuk memunculkan menu */
+    nav.nav-active {
+        transform: translateX(0%);
+    }
+}
+
+nav ul {
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-active {
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 640px) {}
